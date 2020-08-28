@@ -3,7 +3,7 @@ import Employees from './components/Employees';
 
 function App() {
   return (
-    <div>
+    <div className="container ">
       <Employees />
     </div>
   );

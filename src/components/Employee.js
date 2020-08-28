@@ -1,12 +1,24 @@
 import React from 'react';
 
-function Employee() {
+export default function Employee({ employee }) {
+  const {
+    picture: { thumbnail },
+    name: { first, last },
+    location: { country },
+    email,
+    dob: { age },
+  } = employee;
+
+  const name = first + ' ' + last;
   return (
     <tr>
-      <td>Mark</td>
-      <td>Liu</td>
+      <td>
+        <img src={thumbnail} alt={name} />
+      </td>
+      <td>{name}</td>
+      <td>{age}</td>
+      <td>{email}</td>
+      <td>{country}</td>
     </tr>
   );
 }
-
-export default Employee;
